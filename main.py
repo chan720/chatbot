@@ -1,32 +1,3 @@
-# import pandas as pd
-# import numpy as np
-# from sklearn.feature_extraction.text import TfidfVectorizer
-# from sklearn.metrics.pairwise import cosine_similarity
-# faq_data=pd.read_csv('faq_data.csv')
-# # print(faq_data)
-# vectorizer=TfidfVectorizer()
-# faq_vector=vectorizer.fit_transform(faq_data)
-
-# def get_response(user_query):
-#     query_vector=vectorizer.transform([user_query])
-#     similarity_scores=cosine_similarity(query_vector,faq_vector)
-#     best_match=np.argmax(similarity_scores)
-#     best_score=similarity_scores[0][best_match]
-
-#     if best_score>0.5:
-#         return faq_data['Answer'][best_match]
-#     else:
-#         return "I'm sorry to answer this"
-
-# while True:
-#     user_input = input("you: ")
-#     if user_input.lower() == 'quit':
-#         print("Chatbot: Goodbye!")
-#         break
-#     response=get_response(user_input)
-#     print("Chatbot: ",response)
-
-
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
